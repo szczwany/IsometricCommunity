@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF6E32C2-C5D6-4D92-BF9B-810C73A4BDFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IsometricCommunity</RootNamespace>
+    <AssemblyName>IsometricCommunity</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Components\Camera.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="GameObjects\Interfaces\ICloneable.cs" />
+    <Compile Include="GameObjects\Maps\Overworld.cs" />
+    <Compile Include="GameObjects\Maps\Tile.cs" />
+    <Compile Include="GameObjects\Maps\TileMap.cs" />
+    <Compile Include="GameObjects\Other\Overlay.cs" />
+    <Compile Include="GameObjects\Other\OverlayTile.cs" />
+    <Compile Include="GameObjects\CollisionObject.cs" />
+    <Compile Include="GameObjects\MapObject.cs" />
+    <Compile Include="GameObjects\Structures\Structure.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="GUI\GuiIcon.cs" />
+    <Compile Include="HelperMethods.cs" />
+    <Compile Include="IsometricCommunity.cs" />
+    <Compile Include="Managers\BuildingManager.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\overlay1.png" />
+    <Content Include="Content\Resources\gui1.png" />
+    <Content Include="Content\Resources\wood1.png" />
+    <Content Include="Content\Structures\Buildings\Farming\farm1.png" />
+    <Content Include="Content\Structures\Buildings\Industry\forge1.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house11.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house12.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house21.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house22.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house71.png" />
+    <Content Include="Content\Structures\Buildings\Houses\house72.png" />
+    <Content Include="Content\Structures\Buildings\Industry\forge2.png" />
+    <Content Include="Content\Structures\Buildings\Industry\grapemill1.png" />
+    <Content Include="Content\Structures\Buildings\Industry\mill2.png" />
+    <Content Include="Content\Structures\Buildings\Industry\oilmill1.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill10.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill11.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill12.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill13.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill14.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill15.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill16.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill17.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill18.png" />
+    <Content Include="Content\Structures\Buildings\Industry\sawmill19.png" />
+    <Content Include="Content\Structures\Buildings\Industry\woodmill1.png" />
+    <Content Include="Content\Structures\Buildings\Industry\stoner1.png" />
+    <Content Include="Content\Structures\Buildings\Industry\stoner2.png" />
+    <Content Include="Content\Structures\Buildings\Store\woodstore1.png" />
+    <Content Include="Content\Structures\Buildings\Store\woodstore2.png" />
+    <Content Include="Content\Structures\Buildings\Store\woodstore3.png" />
+    <Content Include="Content\Structures\Buildings\Store\woodstore4.png" />
+    <Content Include="Content\Structures\Buildings\zeus1.png" />
+    <Content Include="Content\Structures\Vegetation\grass1.png" />
+    <Content Include="Content\Structures\Vegetation\tree1.png" />
+    <Content Include="Content\Structures\Vegetation\tree2.png" />
+    <Content Include="Content\Terrain\desert1.png" />
+    <Content Include="Content\Terrain\tile1.png" />
+    <Content Include="Content\Terrain\water1.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Structures\Buildings\Industry\Animations\" />
+    <Folder Include="Content\Units\" />
+    <Folder Include="GameObjects\Units\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
